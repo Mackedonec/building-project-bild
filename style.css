@@ -1,0 +1,650 @@
+/*
+Theme Name: CustomTheme
+Theme URI: https://wordpress.org/themes/CustomTheme/
+Author: the Rost team
+Author URI: http://rost.com.ua/
+Description: CustomTheme brings your site to life with immersive featured images and subtle animations. Our default theme works great in many languages, for any abilities, and on any device.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: CustomTheme
+Tags: custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Black.ttf) format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Light.ttf) format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./assets/fonts/Roboto-Thin.ttf) format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+header {
+  padding-top: 30px;
+}
+
+section {
+  font-family: "Roboto";
+}
+section.building {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: calc(100vh - 150px);
+}
+section.building .building-info {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 20px;
+  padding: 25px;
+  border-radius: 30px;
+}
+section.building .building-info-box {
+  width: 100%;
+  border-radius: 30px;
+  padding: 15px;
+  max-width: 275px;
+  margin: 20px;
+}
+section.building .building-info-box__title {
+  text-align: center;
+  font-weight: 100;
+}
+section.building .building-info-box__item {
+  padding: 12px;
+}
+section.building .building-info-box__descriptions {
+  padding: 12px;
+  font-size: 14px;
+  text-align: justify;
+  min-height: 250px;
+}
+section.building .building-info-box h5,
+section.building .building-info-box p {
+  text-align: left;
+  border-radius: 10px;
+  font-weight: 300;
+}
+section.building .building-info-box span {
+  font-size: 18px;
+  color: #fca503;
+  margin-left: 15px;
+  font-weight: 700;
+}
+section.building svg {
+  height: 100%;
+  max-width: 100%;
+}
+section.building svg .build {
+  fill: #c47caf;
+  stroke: #000000;
+  cursor: pointer;
+  fill-opacity: 0.5;
+  stroke-opacity: 0.2;
+  stroke-width: 5px;
+  transition: 0.3s;
+}
+section.building svg .build:hover {
+  fill-opacity: 0.5;
+  stroke-opacity: 0.4;
+}
+section.building svg .build:hover.build-1 {
+  fill-opacity: 0.8;
+  stroke-opacity: 0.8;
+  fill: #080808;
+  stroke: #080808;
+}
+section.building svg .build:hover.build-2 {
+  fill: #ff0505;
+  stroke: #ff0505;
+}
+section.building svg .build:hover.build-3 {
+  fill: #28ff05;
+  stroke: #28ff05;
+}
+section.building svg .build:hover.build-4 {
+  fill: #0500ff;
+  stroke: #0500ff;
+}
+section.building svg .build:hover.build-5 {
+  fill: #ebff00;
+  stroke: #ebff00;
+}
+
+.building-link.sold:hover path {
+  cursor: not-allowed;
+}
+
+h1,
+.h1 {
+  font-size: 30px;
+  font-family: "Roboto";
+}
+
+h2,
+.h2 {
+  font-size: 24px;
+  font-family: "Roboto";
+}
+
+h3,
+.h3 {
+  font-size: 22px;
+  font-family: "Roboto";
+}
+
+h4,
+.h4 {
+  font-size: 20px;
+  font-family: "Roboto";
+}
+
+h5,
+.h5 {
+  font-size: 18px;
+  font-family: "Roboto";
+}
+
+h6,
+.h6 {
+  font-size: 16px;
+  font-family: "Roboto";
+}
+
+section {
+  font-family: "Roboto";
+}
+section.red-building, section.yellow-building, section.green-building, section.blue-building {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: calc(100vh - 150px);
+}
+section .building-info {
+  width: 100%;
+  max-width: 455px;
+  margin: 5px 30px;
+  padding: 15px;
+  border-radius: 30px;
+}
+section .one-building-info-box {
+  text-align: center;
+  width: 100%;
+  border-radius: 30px;
+  padding: 15px;
+  max-width: 350px;
+}
+section .one-building-info-box__descriptions {
+  padding: 12px;
+  font-size: 14px;
+  text-align: justify;
+  min-height: 250px;
+}
+section .one-building-info-box h5,
+section .one-building-info-box h2 {
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 100;
+}
+section .one-building-info-box .flats-info-box__item {
+  padding: 12px;
+}
+section .one-building-info-box .flats-info-box__item.free span {
+  color: #05b548;
+}
+section .one-building-info-box .flats-info-box__item.booking span {
+  color: #ebff00;
+}
+section .one-building-info-box .flats-info-box__item.action span {
+  color: #0500ff;
+}
+section .one-building-info-box .flats-info-box__item.sold span {
+  color: #ff0505;
+}
+section .one-building-info-box .flats-info-box h3 {
+  border-radius: 10px;
+  text-align: left;
+  font-weight: 100;
+}
+section .one-building-info-box .flats-info-box p {
+  text-align: left;
+  border-radius: 10px;
+  font-weight: 300;
+}
+section .one-building-info-box .flats-info-box span {
+  font-size: 20px;
+  color: #fca503;
+  margin-left: 15px;
+  padding-right: 15px;
+  font-weight: 700;
+}
+section svg {
+  height: 100%;
+  max-width: 100%;
+}
+section svg .floor {
+  fill: rgba(83, 81, 81, 0.2823529412);
+  stroke: #000000;
+  cursor: pointer;
+  fill-opacity: 0.5;
+  stroke-opacity: 0.15;
+  stroke-width: 1px;
+  transition: 0.3s;
+}
+section svg .floor:hover {
+  fill-opacity: 0.5;
+  stroke-opacity: 0.4;
+}
+section svg .floor:hover.floor {
+  fill: #28ff05;
+  stroke: #28ff05;
+}
+section svg .floor:hover.floor.sold {
+  fill: #ff0505;
+  stroke: #ff0505;
+}
+section svg .floor:hover.floor.booking {
+  fill: #ebff00;
+  stroke: #ebff00;
+}
+section svg .floor:hover.floor.action {
+  fill: #0500ff;
+  stroke: #0500ff;
+}
+section .floor-link.sold:hover path {
+  cursor: not-allowed;
+}
+
+section {
+  font-family: "Roboto";
+}
+section.blue-building .building-info {
+  max-width: 394px;
+}
+
+section {
+  font-family: "Roboto";
+}
+section.green-building .building-info {
+  max-width: 394px;
+}
+
+section {
+  font-family: "Roboto";
+}
+section.yellow-building .building-info {
+  max-width: 554px;
+}
+
+.rooms-info h2 {
+  border-radius: 30px;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  margin: 0 50px;
+}
+.rooms-info .tab {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: calc(100vh - 200px);
+}
+.rooms-info .tab .tab-list {
+  border-radius: 30px;
+  padding: 10px 30px;
+  margin: 20px auto 20px;
+  transition: 0.3s;
+}
+.rooms-info .tab .tab-list li {
+  margin: 0 auto;
+  padding: 5px;
+}
+.rooms-info .tab .tab-list li a {
+  transition: 0.3s;
+  font-size: 15px;
+  padding: 10px;
+  color: #ffffff;
+  box-shadow: 3px 3px 7px #202020, -3px -3px 7px #161616;
+}
+.rooms-info .tab .tab-list li a.current {
+  box-shadow: 3px 3px 7px #565555, -3px -3px 7px #191919;
+  color: transparent;
+  text-shadow: 1px 1px white;
+}
+.rooms-info .tab .tab-list li a.current:hover {
+  transition: 0.3s;
+  box-shadow: 3px 3px 7px #565656, -3px -3px 7px #191919;
+}
+.rooms-info .tab .tab-list li a:hover {
+  transition: 0.3s;
+  box-shadow: 3px 3px 7px #2f2f2f, -3px -3px 7px #2f2f2f;
+}
+.rooms-info .tab .tab-list li a:focus-visible {
+  outline: none;
+}
+.rooms-info .tab .tab-content {
+  position: relative;
+  max-width: calc(100% - 40px);
+  height: 100%;
+  padding: 50px 20px 10px;
+  border-radius: 30px;
+  margin: 10px auto;
+  box-shadow: 3px 3px 7px #000000, -3px -3px 7px #000000;
+}
+.rooms-info .tab .tab-content .tab-content--list {
+  padding: 0;
+  min-height: 100%;
+  text-align: center;
+  max-width: 1760px;
+}
+.rooms-info .big {
+  min-height: 660px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1800px;
+}
+.rooms-info .big .button-index {
+  text-align: center;
+  padding: 10px 30px;
+  width: 100%;
+  max-width: 70px;
+  z-index: 2;
+  left: 50%;
+  top: 10px;
+  transform: translate(-50%, 0);
+  list-style: none;
+  position: absolute;
+}
+.rooms-info .big .button-index::after {
+  content: "Next";
+}
+.rooms-info .big .tab-content--list .tab-content--text svg {
+  width: calc(100% - 140px);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.rooms-info .big .tab-content--list .tab-content--text svg:nth-of-type(odd) {
+  z-index: 1;
+}
+.rooms-info .big .tab-content--list .tab-content--text svg:nth-of-type(even) {
+  z-index: 0;
+}
+.rooms-info .big.zindex .button-index::after {
+  content: "Previous";
+}
+.rooms-info .big.zindex .tab-content--list .tab-content--text svg:nth-of-type(odd) {
+  z-index: 0;
+}
+.rooms-info .big.zindex .tab-content--list .tab-content--text svg:nth-of-type(even) {
+  z-index: 1;
+}
+.rooms-info .flat-info-box {
+  border-radius: 30px;
+  color: #000;
+  margin: 10px auto 0;
+  padding: 10px 30px;
+}
+.rooms-info .flat-info-box #flat-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.rooms-info .flat-info-box .flat-info {
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.rooms-info .flat-info-box .flat-info span {
+  color: red;
+  padding-top: 5px;
+}
+.rooms-info .flat-rooms-info {
+  font-size: 18px;
+  border-radius: 30px;
+  text-align: center;
+  padding: 10px 30px;
+  margin: 0 auto 10px;
+}
+
+svg .flat-path {
+  fill: transparent;
+  stroke: transparent;
+  cursor: pointer;
+}
+svg .flat-path:hover {
+  fill: rgba(34, 253, 0, 0.3098039216);
+  stroke: #555654;
+  stroke-width: 3px;
+}
+svg .flat .bg-status {
+  fill: #61fd01;
+}
+svg .flat .bg-status-2 {
+  fill: #adf77f;
+}
+svg .flat.action .bg-status {
+  fill: #001eff;
+}
+svg .flat.action .bg-status-2 {
+  fill: #82a5f6;
+}
+svg .flat.action .flat-path:hover {
+  fill: rgba(4, 0, 255, 0.3137254902);
+}
+svg .flat.sold .bg-status {
+  fill: #ff0505;
+}
+svg .flat.sold .bg-status-2 {
+  fill: #fb7d7d;
+}
+svg .flat.sold .flat-path:hover {
+  fill: rgba(255, 5, 5, 0.2941176471);
+}
+svg .flat.booking .bg-status {
+  fill: #ebff00;
+}
+svg .flat.booking .bg-status-2 {
+  fill: #e9f474;
+}
+svg .flat.booking .flat-path:hover {
+  fill: rgba(234, 255, 0, 0.4039215686);
+}
+svg .flat.activ .bg-status {
+  fill: #5f5f5f;
+}
+svg .flat.activ .bg-status-2 {
+  fill: #5c5c5c;
+}
+svg .flat.activ .flat-path {
+  fill: rgba(95, 95, 95, 0.5215686275);
+}
+svg .flat.activ .flat-path:hover {
+  fill: rgba(95, 95, 95, 0.5215686275);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  height: 120px;
+}
+
+@media screen and (max-width: 1199px) {
+  section.building {
+    flex-direction: column;
+  }
+  .rooms-info .big {
+    min-height: 450px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  section.building {
+    justify-content: flex-start;
+  }
+  section.building .building-info-box {
+    max-width: 200px;
+  }
+  section.building .building-info-box__item {
+    padding: 6px;
+  }
+  section.building .building-info-box__descriptions {
+    padding: 6px;
+    font-size: 10px;
+    min-height: 150px;
+  }
+  section.building .building-info-box h2 {
+    font-size: 16px;
+  }
+  section.building .building-info-box h5,
+  section.building .building-info-box p {
+    font-size: 12px;
+  }
+  section.building .building-info-box span {
+    font-size: 18px;
+    color: #fca503;
+    margin-left: 15px;
+    font-weight: 700;
+  }
+  .rooms-info .big {
+    min-height: 350px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 575px) {
+  section.red-building, section.blue-building, section.green-building, section.yellow-building {
+    padding-top: 50px;
+    align-items: flex-start;
+  }
+  section .building-info {
+    margin: 5px 15px;
+    padding: 10px;
+  }
+  section .one-building-info-box {
+    text-align: center;
+    width: 100%;
+    border-radius: 30px;
+    padding: 15px;
+    max-width: 350px;
+  }
+  section .one-building-info-box__descriptions {
+    padding: 6px;
+    font-size: 10px;
+    min-height: 75px;
+  }
+  section .one-building-info-box h5,
+  section .one-building-info-box h2 {
+    font-size: 12px;
+  }
+  section .one-building-info-box .flats-info-box__item {
+    padding: 6px;
+  }
+  section .one-building-info-box .flats-info-box h3 {
+    font-size: 12px;
+  }
+  section .one-building-info-box .flats-info-box p {
+    font-size: 10px;
+  }
+  section .one-building-info-box .flats-info-box span {
+    font-size: 12px;
+  }
+  .rooms-info h2 {
+    font-size: 14px;
+  }
+  .rooms-info .tab {
+    min-height: calc(100vh - 185px);
+  }
+  .rooms-info .tab .tab-list {
+    border-radius: 30px;
+    padding: 20px;
+    margin: 10px auto;
+  }
+  .rooms-info .tab .tab-list li {
+    margin: 0 auto;
+    padding: 5px;
+  }
+  .rooms-info .tab .tab-list li a {
+    font-size: 10px;
+    padding: 5px;
+  }
+  .rooms-info .tab .tab-content {
+    max-width: 100%;
+    padding: 0;
+  }
+  .rooms-info .tab .tab-content .tab-content--list {
+    margin: 0;
+  }
+  .rooms-info .big {
+    min-height: 200px;
+  }
+  .rooms-info .big .button {
+    padding: 2px 10px;
+    top: 5px;
+  }
+  .rooms-info .big .tab-content--list .tab-content--text svg {
+    width: calc(100% - 40px);
+  }
+  .rooms-info .flat-info-box {
+    font-size: 14px;
+    margin: 5px auto 0;
+    padding: 5px;
+  }
+  .rooms-info .flat-info-box .flat-info {
+    padding: 5px;
+    margin: 5px;
+  }
+  .rooms-info .flat-info-box .flat-info span {
+    padding-top: 5px;
+  }
+  .rooms-info .flat-rooms-info {
+    font-size: 14px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
